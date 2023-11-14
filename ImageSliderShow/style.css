@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #171717;
+}
+.img{
+    background: url(..Img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 500px;
+    margin: 150px auto;
+    animation: img-slide 12s infinite;
+}
+@keyframes img-slide {
+    25%{
+        background: url(Img/img1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    50%{
+        background: url(Img/img2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    75%{
+        background: url(Img/img3.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        background: url(Img/img4.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
