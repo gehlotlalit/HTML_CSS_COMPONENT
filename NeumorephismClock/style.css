@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #282828;
+}
+.clock{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 20px solid #252525;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #282828;
+    box-shadow: inset 0px 0px 8px black;
+}
+.clock::before{
+    position: absolute;
+    content: '';
+    background: #6facf2;
+    height: 130px;
+    width: 10px;
+    top: 50%;
+    left: calc(50% - 5px);
+    border-radius: 5px;
+    transform-origin: top;
+    animation: spin 6s linear infinite;
+}
+.clock::after{
+    position: absolute;
+    content: '';
+    background: #976333;
+    height: 90px;
+    width: 10px;
+    top: 50%;
+    left: calc(50% - 5px);
+    border-radius: 5px; 
+    transform-origin: top;
+    animation: spin 80s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+body::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+body::after{
+    content: '';
+    position: absolute;
+    background: #6c6c6e;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    left: 50%;
+    top: calc(50% - 145px);
+    z-index: 2;
+    transform: translateX(-50%);
+    box-shadow: 140px 145px 0 0 #6c6d6e, -140px 145px 0 0 #6c6d6e, 0 280px 0 0 #6c6d6e ;
+
+}
